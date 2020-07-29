@@ -1,0 +1,61 @@
+{% extends 'base.html'%}
+{% load static %}
+
+    
+{% block content %}
+    <!-- Main Content -->
+   <main>
+        <div class="container mt-2 mt-md-3 mt-xl-5 px-3 px-md-4 px-lg-5 px-xl-5 mx-xl-5">
+            <!-- Bread Crumbs -->
+            <nav aria-label="breadcrumb" class="my-4 mt-xl-0">
+                <ol class="breadcrumb mx-3 py-0 my-0 px-0 bg-transparent">
+                    <li class="breadcrumb-item">Your APIs</li>
+                    <li class="breadcrumb-item">Excel API</li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-9 col-md-5 col-lg-4 col-xl-3 pr-0 mt-xl-2">
+                    <div class="card shadow-sm ml-3 mr-0 custom-card">
+                        <div class="card-body py-0 d-flex justify-content-start">
+                            <img src="/static/img/excel-icon.svg" class="img-fluid my-2 mr-1 my-md-3 mr-md-2">
+                            <span class="font-weight-bold card-head my-4 ml-2"><b>Excel API</b></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 mt-3 mt-lg-auto mx-3 pl-xl-0">
+                    <p class="mb-1 description">By <span class="text-info">HNGi7 Interns |</span>  Updated 1 day ago  <span class="text-info">| Email</span></p>
+                </div>
+                <div class="col-11 col-lg-12 mx-auto  mx-lg-3 mb-xl-4">
+                    <hr class="mt-1 mt-md-2 mt-lg-3">
+                </div>
+                <div class="col-9 col-lg-12 mx-3 ml-xl-3 mt-lg-4 mb-lg-3 d-flex justify-content-start">
+                    <span class="feature-heading mr-2">cdn Upload</span>
+                    <img src="/static/img/upload-icon.svg" class="ml-3" alt="upload icon">
+                </div>
+            </div>
+        </div>
+        <div class="content-split mb-5 mt-2">
+
+        </div>
+         <!--  -->
+        <div class="container">
+            <div class="row mb-lg-5 pb-lg-5">
+                <div class="col-lg-8 mx-3 mx-lg-auto pt-lg-5 mb-lg-5">
+                    <form  method = "post" enctype="multipart/form-data" id = "myform"> 
+                        {% csrf_token %}
+                        <label for="ohh" class="display-5 custom-label mb-md-3">Paste Excel Link</label>
+                        <input class="form-control custom-input mb-lg-4" id="ohh" name = "link">
+                    <button class="btn btn-dark px-4 py-2 custom-button mt-4" type="submit" name="jsonlink" id = "json">PARSE FOR JSON</button>
+                    <button class="btn btn-dark px-4 py-2 custom-button mt-4" type="submit" name="csvlink">PARSE FOR CSV</button>
+                    
+                    </form>
+                    <script>
+                </script>
+                </div>
+            </div>
+        </div>
+    </main>
+
+        
+    {% endblock content %}
+        
